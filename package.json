@@ -10,6 +10,7 @@
     "css:watch": "yarn css -w",
     "css:minify": "cleancss -o ./public/dist/main.css ./public/dist/main.css",
     "dev": "elm-spa server & yarn css:watch",
+    "elm:format": "elm-format src tests",
     "test": "elm-test"
   },
   "keywords": [],
