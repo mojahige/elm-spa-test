@@ -5,16 +5,24 @@
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "add": "elm-spa add",
-    "build": "elm-spa build",
-    "dev": "elm-spa server",
+    "build": "elm-spa build && yarn css && yarn css:minify",
+    "css": "postcss ./src/main.css -o ./public/dist/main.css",
+    "css:watch": "yarn css -w",
+    "css:minify": "cleancss -o ./public/dist/main.css ./public/dist/main.css",
+    "dev": "elm-spa server & yarn css:watch",
     "test": "elm-test"
   },
   "keywords": [],
   "author": "mojahige (Yu Nozato)",
   "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "clean-css-cli": "^5.6.1",
     "elm": "^0.19.1-5",
     "elm-format": "^0.8.5",
-    "elm-test": "^0.19.1-revision9"
+    "elm-test": "^0.19.1-revision9",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.1.8"
   },
   "dependencies": {
     "elm-spa": "^6.0.4"
