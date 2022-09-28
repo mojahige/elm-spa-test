@@ -1,0 +1,20 @@
+{
+  "name": "elm-spa-test",
+  "private": true,
+  "description": "> 🌳  built with [elm-spa](https://elm-spa.dev)",
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "add": "elm-spa add",
+    "build": "elm-spa build",
+    "dev": "elm-spa server"
+  },
+  "keywords": [],
+  "author": "mojahige (Yu Nozato)",
+  "devDependencies": {
+    "elm": "^0.19.1-5",
+    "elm-format": "^0.8.5"
+  },
+  "dependencies": {
+    "elm-spa": "^6.0.4"
+  }
+}
