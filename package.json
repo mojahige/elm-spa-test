@@ -6,13 +6,15 @@
   "scripts": {
     "add": "elm-spa add",
     "build": "elm-spa build",
-    "dev": "elm-spa server"
+    "dev": "elm-spa server",
+    "test": "elm-test"
   },
   "keywords": [],
   "author": "mojahige (Yu Nozato)",
   "devDependencies": {
     "elm": "^0.19.1-5",
-    "elm-format": "^0.8.5"
+    "elm-format": "^0.8.5",
+    "elm-test": "^0.19.1-revision9"
   },
   "dependencies": {
     "elm-spa": "^6.0.4"
