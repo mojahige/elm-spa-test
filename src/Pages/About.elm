@@ -1,7 +1,6 @@
 module Pages.About exposing (page)
 
 import Gen.Params.About exposing (Params)
-import Helpers.Url exposing (generateUrlString)
 import Html
 import Layouts.Base
 import Page exposing (Page)
@@ -21,8 +20,7 @@ view : Request -> View msg
 view req =
     { title = "Abount"
     , body =
-        Layouts.Base.layout
+        Layouts.Base.layout req
             [ Html.p [] [ Html.text "About" ]
-            , Html.p [] [ Html.text (generateUrlString req.url) ]
             ]
     }

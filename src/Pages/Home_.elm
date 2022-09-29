@@ -1,6 +1,5 @@
 module Pages.Home_ exposing (page, view)
 
-import Helpers.Url exposing (generateUrlString)
 import Html
 import Layouts.Base
 import Page exposing (Page)
@@ -21,8 +20,7 @@ view : Request -> View msg
 view req =
     { title = "Homepage"
     , body =
-        Layouts.Base.layout
+        Layouts.Base.layout req
             [ Html.p [] [ Html.text "Hello, world!" ]
-            , Html.p [] [ Html.text (generateUrlString req.url) ]
             ]
     }
